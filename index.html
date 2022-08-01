@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment Box</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <h1>
+        Who should be Britain’s next prime minister, Rishi Sunak or Liz Truss?
+        🇬🇧
+      </h1>
+      <section class="comments-form-wrapper">
+        <form class="comments" action="">
+          <div class="form-item">
+            <label for="firstname">Name: </label>
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              required
+              maxlength="40"
+            />
+          </div>
+          <div class="form-item">
+            <label for="email">Email: </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              maxlength="40"
+            />
+          </div>
+
+          <div class="comment-wrapper">
+            <label for="comment"><b>Comments:</b></label>
+            <textarea
+              name="comment"
+              id="comment"
+              cols="100"
+              rows="5"
+              required
+            ></textarea>
+            <p class="characters">
+              <b>Character Count: </b><span id="character-count">0</span>/140
+            </p>
+          </div>
+
+          <div class="form-item">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="all-comments">
+        <h2>Comments</h2>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
