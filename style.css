@@ -20,16 +20,14 @@ input,
 textarea,
 button {
     font-family: inherit;
+    font-size: 16px;
 }
 
 section,
 h1 {
     padding: 20px;
-    width: 100%;
-    max-width: 800px;
     margin: 0 auto;
 }
-
 
 h1 {
     padding: 40px;
@@ -111,49 +109,45 @@ h2 {
 .comment-wrapper .characters {
     font-size: 14px;
     padding-top: 10px;
-    text-align: right;
+    text-align: right
 }
 
-/* COMMENTS OUTPUT */
-
-.all-comments {
-    height: 350px;
-    overflow-y: scroll;
-    padding-top: 0;
-}
-
-.all-comments::-webkit-scrollbar {
-    width: 10px;
-}
-
-.all-comments::-webkit-scrollbar-track {
-    background: antiquewhite;
-}
-
-.all-comments::-webkit-scrollbar-thumb {
-    background: rgb(107, 107, 233);
-    border-radius: 5px;
-}
-
-.comment-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+@media only screen and (max-width: 767px) {
+    .comments {
+    grid-template-columns: 1fr;
+    }
+    .comment-wrapper {
+    grid-column: 1 / span 1;
+    }
+    h1 {
     padding: 20px;
-}
+    }
+    }
 
-.name-output {
-    font-weight: 500;
-    background-color: rgb(245, 3, 3);
-    color: white;
-    padding: 0 5px;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
+    @media only screen and (min-width: 480px) {
+        h1 {
+        font-size: 36px;
+        }
+        .comments {
+        grid-template-columns: 1fr 2fr;
+        }
+        }
+        
+        @media only screen and (min-width: 768px) {
+        h1 {
+        font-size: 48px;
+        }
+        .comments {
+        grid-template-columns: 1fr 3fr;
+        }
+        }
+        
+        @media only screen and (min-width: 1024px) {
+        h1 {
+        font-size: 60px;
+        }
+        .comments {
+        grid-template-columns: 1fr 4fr;
+        }
+        }
 
-.comment-output {
-    font-weight: 300;
-    width: 100%;
-    word-wrap: break-word;
-}
